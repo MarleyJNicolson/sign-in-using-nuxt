@@ -4,8 +4,8 @@
         <h1 class="modules-login-card__form-title">{{ title }}</h1>
         <h3 class="modules-login-card__form-sub-title">Login</h3>
         <form class="modules-login-card__form" @submit.prevent="handleLogin">
-            <UI-input errorMessage="Missing email" ref="emailInput" class="modules-login-card__form-input" type="email" placeholder="Email" v-model="email" required/>
-            <UI-input errorMessage="Missing password" ref="passwordInput" class="modules-login-card__form-input" type="password" placeholder="Password" v-model="password" required/>
+            <UI-input errorMessage="Missing email" ariaLabel="email" ref="emailInput" class="modules-login-card__form-input" type="email" placeholder="Email" v-model="email" required/>
+            <UI-input errorMessage="Missing password" ref="passwordInput" ariaLabel="password" class="modules-login-card__form-input" type="password" placeholder="Password" v-model="password" required/>
             <p class="modules-login-card__error">{{ errorMessage }}</p>
             <UI-button :state="formState " type="submit" text="Sign In" class="modules-login-card__form-button">Login</UI-button>
         </form>

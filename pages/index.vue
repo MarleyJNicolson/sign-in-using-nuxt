@@ -1,7 +1,7 @@
 <!-- pages/login.vue -->
 <template>
   <div class="login-page" :class="{ 'login-page--transition' : logThemIn }">
-    <modules-login ref="moduleLogin" title="Welcome to ITC Complice" :errorMessage="serverResponse" @module-login-emit="handleLoginEmit" />
+    <modules-login ref="moduleLogin" title="Welcome to ITC compliance" :errorMessage="serverResponse" @module-login-emit="handleLoginEmit" />
   </div>
 </template>
 

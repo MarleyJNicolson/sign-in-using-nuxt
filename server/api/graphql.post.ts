@@ -1,12 +1,13 @@
 const users = [
   { name: 'Marley Nicolson', email: 'marleynicolson2@hotmail.com', password: 'password', role: 'Admin', id: 1 },
-  { name: 'Alice Carter', email: 'alice@example.com', password: 'password', role: 'Viewer' , id: 2},
-  { name: 'Liam Jones', email: 'bob@example.com', password: 'hunter2', role: 'Viewer' , id: 3},
+  { name: 'James Snell', email: 'james.snell@itccompliance.co.uk', password: 'password', role: 'Admin', id: 2 },
+  { name: 'Alice Carter', email: 'alice@example.com', password: 'password', role: 'Viewer' , id: 3},
+  { name: 'Liam Jones', email: 'bob@example.com', password: 'hunter2', role: 'Viewer' , id: 4},
 ]
 const validTokens = new Set<string>()
 // lazy stop dupes
 var userIDcount = 3;
-
+var saveCurrentToken ='';
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -18,7 +19,8 @@ export default defineEventHandler(async (event) => {
   
     return {
       data: {
-        validateToken: isValid
+        validateToken: isValid,
+        token: saveCurrentToken 
       }
     }
   }
@@ -49,7 +51,7 @@ export default defineEventHandler(async (event) => {
     if(user) {
 
       const token = generateRandomToken(64)
-
+      saveCurrentToken = token;
       validTokens.add(token)
       return {
         data: {

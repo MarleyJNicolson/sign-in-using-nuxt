@@ -166,7 +166,7 @@ import { from } from '@apollo/client';
 
 <style scoped lang="scss">
     .modules-users{
-        max-width: 566px;
+        max-width: 580px;
         width: 100%;
         display: flex;
         flex-direction: column; 
@@ -272,6 +272,7 @@ import { from } from '@apollo/client';
             border: none;
             background-color: #ffffff00 !important;
             box-shadow: none;
+            height: auto;
 
             .modules-users__user-list {
                 width: calc(100% + 4px);
@@ -281,6 +282,7 @@ import { from } from '@apollo/client';
                 flex-direction: column;
                 overflow: scroll;
                 left: -4px;
+                height: 407px;
                 background-color: #f7f7f71a;
                 border-radius: 20px;
                 border: solid 4px #f7f7f71a;

@@ -19,7 +19,8 @@ export default defineNuxtRouteMiddleware(async () => {
 
   console.log('res resrre', result);
   if (process.client) {
-    if (!result.data.validateToken) {
+    const token = localStorage.getItem('token')
+    if (!result.data.token === token) {
       return navigateTo('/')
     }
     console.log('res resrre client client', result);

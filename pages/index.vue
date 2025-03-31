@@ -101,6 +101,7 @@ const handleLoginEmit = async ([email, password]: [string, string]) => {
   @media (max-width: 750px) {
       .login-page{
           display: block;
+          height: auto;
       } 
   }
 </style>

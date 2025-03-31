@@ -41,6 +41,7 @@ const { $apollo } = useNuxtApp()
         mutation: LOGOUT_MUTATION
         })
         useCookie('token').value = null
+        localStorage.setItem('token', '')
         localStorage.setItem('signedIn', 'false' )
         router.push('/')
     } catch (err) {

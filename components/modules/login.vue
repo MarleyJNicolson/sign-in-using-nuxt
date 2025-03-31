@@ -75,7 +75,7 @@
         h1{
             color: var(--color-primary);
             font-size: var(--font-size-h1);
-            max-width: 300px;
+            max-width: 310px;
             line-height: var(--line-height-h1);
             text-align: center;
             margin-bottom: 20px;

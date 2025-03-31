@@ -60,7 +60,8 @@ const handleLoginEmit = async ([email, password]: [string, string]) => {
 
       moduleLogin.value.successListener('success');
       toast.add({
-          description: 'Sign in successful',
+          title : 'Welcome back!',
+          description: 'Sign in successful'
       });
       logThemIn.value = true;
 

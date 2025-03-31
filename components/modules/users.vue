@@ -143,6 +143,7 @@ import { from } from '@apollo/client';
                     isPopoverOpen.value = false
                 }, 2000) // 2 second delay
                 toast.add({
+                    title : newUser.name + ' is here!',
                     description: 'User ' + newUser.name + ' added'
                 });
                 

@@ -14,6 +14,7 @@ import { useAuthStore } from '@/stores/auth'
 import { ref } from 'vue'
 const route = useRoute()
 const router = useRouter()
+const toast = useToast()
 const { $apollo } = useNuxtApp()
     const props = defineProps({
         loggedIn: {
@@ -43,6 +44,11 @@ const { $apollo } = useNuxtApp()
         useCookie('token').value = null
         localStorage.setItem('token', '')
         localStorage.setItem('signedIn', 'false' )
+        toast.add({
+            title : 'See you again soon',
+            description: 'Sign out successful',
+        });
+        
         router.push('/')
     } catch (err) {
         console.error('Logout error:', err)

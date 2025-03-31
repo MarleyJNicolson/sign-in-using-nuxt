@@ -1,0 +1,24 @@
+:root {
+    --color-primary: #41c6fb;   
+    --color-primary-dropback: #2a89af;
+
+    --color-secondary: #1c1c1e;
+
+    --color-tertiary: #ffff;
+
+    --color-quaternary: #494949;
+
+    --color-error: #e74444;
+    --color-success: #30f99f;
+
+    --font-size-base: 16px;
+    --font-size-h1: 50px;
+    --line-height-h1: 1.2;
+
+    --font-size-h2: 35px;
+    --font-size-h3: 28px;
+    --font-size-h4: 20px;
+    --spacing-unit: 1rem;
+    --border-radius: 5px;
+    
+}
